@@ -7,8 +7,9 @@ function formatSkin(skin) {
       price: skin.sell_price_text,
       volume: skin.volume,
       sellListings: skin.sell_listings,
-      icon: `https://steamcommunity.com/market/image/${skin.asset_description.icon_url}`,
-      currency: detectCurrency(skin.sell_price_text)
+      icon: `https://steamcommunity-a.akamaihd.net/economy/image/${skin.asset_description.icon_url}`,
+      currency: detectCurrency(skin.sell_price_text),
+      // asset_description: skin.asset_description
     };
   }
   
@@ -22,3 +23,5 @@ function formatSkin(skin) {
   module.exports = {
     formatSkin
   };
+
+  

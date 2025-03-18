@@ -8,14 +8,15 @@ class skinsService {
     constructor() {
         this.apiUrl = config.STEAM_API.URL;
         this.headers = config.STEAM_API.HEADERS;
+        this.currencyCodes = config.STEAM_API.CURRENCY_CODES;
         this.defaultParams = config.STEAM_API.DEFAULT_PARAMS;
     }
 
-    async fetchSkinsFromAPI() {
+    async fetchSkinsFromAPI(currency) {
         try {
             const response = await axios.get(this.apiUrl, {
-                params: this.defaultParams,
-                headers: this.headers
+                params: { ...this.defaultParams, currency: this.currencyCodes[currency] },
+                headers: { ...this.headers }
             });
             return this.processAPIData(response.data.results);
         } catch (error) {

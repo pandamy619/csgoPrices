@@ -15,4 +15,13 @@ const skinsController = require('../controllers/skins.controller');
 */
 router.get('/popular', skinsController.getPopularSkins);
 
+/**
+* @openapi
+* /api/v1/skins/:
+*   get:
+*/
+// router.get('/best-marker-offers-dmarket', skinsController.getBestMarkerOffersDMarket);
+
+
+
 module.exports = router;
