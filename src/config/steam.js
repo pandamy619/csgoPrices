@@ -1,6 +1,8 @@
 module.exports = {
     STEAM_API: {
         URL: 'https://steamcommunity.com/market/search/render/',
+        URL_MARKET: 'https://market.csgo.com/api/v2/prices/USD.json',
+        STEAM_HISTORY_URL: 'https://steamcommunity.com/market/pricehistory/?appid=730&market_hash_name=',
         CURRENCY_CODES: {
             USD: 1,   // Доллар США
             GBP: 2,   // Фунт стерлингов
